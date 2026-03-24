@@ -9,7 +9,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:4000",
+    origin: "https://cv-analyzer-fe.vercel.app/",
   }),
 );
 
