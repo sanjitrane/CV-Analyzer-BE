@@ -9,9 +9,12 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://cv-analyzer-fe.vercel.app/",
+    origin: ["https://cv-analyzer-fe.vercel.app/"],
+    methods: ["GET", "POST"],
+    credentials: true,
   }),
 );
+app.options("*", cors());
 
 app.use(express.json());
 
